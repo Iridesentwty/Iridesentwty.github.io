@@ -1,0 +1,511 @@
+/* 导航栏样式 */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(232, 119, 34, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav-logo a:hover {
+    color: #FFE4B5;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.nav-link:hover {
+    color: #FFE4B5;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* 基本样式与背景 */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #E87722 0%, #FF6B35 50%, #D84315 100%);
+    font-family: 'Arial', sans-serif;
+    perspective: 1000px;
+    padding: 20px;
+    padding-top: 90px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* 篮球图案背景 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        /* 篮球1 */
+        radial-gradient(circle at 15% 20%, 
+            transparent 15px, 
+            rgba(139, 69, 19, 0.05) 15px, 
+            rgba(139, 69, 19, 0.05) 25px, 
+            transparent 25px
+        ),
+        /* 篮球2 */
+        radial-gradient(circle at 85% 70%, 
+            transparent 12px, 
+            rgba(139, 69, 19, 0.05) 12px, 
+            rgba(139, 69, 19, 0.05) 20px, 
+            transparent 20px
+        ),
+        /* 篮球3 */
+        radial-gradient(circle at 70% 15%, 
+            transparent 18px, 
+            rgba(139, 69, 19, 0.05) 18px, 
+            rgba(139, 69, 19, 0.05) 28px, 
+            transparent 28px
+        ),
+        /* 篮球4 */
+        radial-gradient(circle at 25% 80%, 
+            transparent 14px, 
+            rgba(139, 69, 19, 0.05) 14px, 
+            rgba(139, 69, 19, 0.05) 22px, 
+            transparent 22px
+        );
+    background-size: 400px 400px, 350px 350px, 450px 450px, 380px 380px;
+    background-position: 0 0, 100px 50px, -50px 100px, 200px -20px;
+    pointer-events: none;
+    z-index: 0;
+    animation: floatBalls 20s infinite linear;
+}
+
+@keyframes floatBalls {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50px); }
+}
+
+/* 页面标题样式 */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    z-index: 2;
+    position: relative;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    text-shadow: 
+        2px 2px 4px rgba(0,0,0,0.5),
+        0 0 20px rgba(255,255,255,0.3);
+    letter-spacing: 2px;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+@keyframes titleGlow {
+    0% { text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 20px rgba(255,255,255,0.3); }
+    100% { text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 30px rgba(255,255,255,0.5); }
+}
+
+/* 卡片画廊容器 */
+.cards-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 运动风格装饰线条 */
+.cards-gallery::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255,255,255,0.3) 20%, 
+        rgba(255,255,255,0.8) 50%, 
+        rgba(255,255,255,0.3) 80%, 
+        transparent 100%
+    );
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* 卡片容器 */
+.card-container {
+    width: 220px;
+    height: 320px;
+}
+
+/* 卡片核心样式 */
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.6),
+        0 5px 15px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: transform 0.1s, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.7),
+        0 10px 25px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Warriors 勇士队主题 (蓝金配色) */
+.card.warriors {
+    background: linear-gradient(135deg, #002D62, #00387C);
+}
+
+/* Lakers 湖人队主题 (紫金配色) */
+.card.lakers {
+    background: linear-gradient(135deg, #552583, #7A3F98);
+}
+
+/* Thunder 雷霆队主题 (橙蓝配色) */
+.card.thunder {
+    background: linear-gradient(135deg, #EF3B24, #007AC1);
+}
+
+/* Bulls 公牛队主题 (红黑配色) */
+.card.bulls {
+    background: linear-gradient(135deg, #CE1141, #000000);
+}
+
+/* Mavericks 独行侠队主题 (蓝白配色) */
+.card.mavericks {
+    background: linear-gradient(135deg, #00538C, #002F5F);
+}
+
+/* 默认光泽效果 */
+.card::before {
+    content: '';
+    position: absolute;
+    top: var(--y, 50%);
+    left: var(--x, 50%);
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none; 
+}
+
+/* Warriors 金色光泽 */
+.card.warriors::before {
+    background: radial-gradient(circle, rgba(253, 185, 39, 0.3), transparent, transparent);
+}
+
+/* Lakers 金色光泽 */
+.card.lakers::before {
+    background: radial-gradient(circle, rgba(253, 185, 39, 0.3), transparent, transparent);
+}
+
+/* Thunder 橙色光泽 */
+.card.thunder::before {
+    background: radial-gradient(circle, rgba(239, 59, 36, 0.4), transparent, transparent);
+}
+
+/* Bulls 红色光泽 */
+.card.bulls::before {
+    background: radial-gradient(circle, rgba(206, 17, 65, 0.4), transparent, transparent);
+}
+
+/* Mavericks 蓝色光泽 */
+.card.mavericks::before {
+    background: radial-gradient(circle, rgba(0, 83, 140, 0.4), transparent, transparent);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    transform: translateZ(50px); /* 让内容浮起来 */
+}
+
+/* 内容样式 */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.team-name {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Warriors 队伍名称 */
+.card.warriors .team-name {
+    color: #FDB927;
+    text-shadow: 0 0 5px #FDB927;
+}
+
+/* Lakers 队伍名称 */
+.card.lakers .team-name {
+    color: #FDB927;
+    text-shadow: 0 0 5px #FDB927;
+}
+
+/* Thunder 队伍名称 */
+.card.thunder .team-name {
+    color: #FF6B35;
+    text-shadow: 0 0 5px #FF6B35;
+}
+
+/* Bulls 队伍名称 */
+.card.bulls .team-name {
+    color: #FF3B30;
+    text-shadow: 0 0 5px #FF3B30;
+}
+
+/* Mavericks 队伍名称 */
+.card.mavericks .team-name {
+    color: #41B6E6;
+    text-shadow: 0 0 5px #41B6E6;
+}
+
+.player-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Warriors 球员号码 */
+.card.warriors .player-number {
+    color: #FDB927;
+    text-shadow: 0 0 8px #FDB927;
+}
+
+/* Lakers 球员号码 */
+.card.lakers .player-number {
+    color: #FDB927;
+    text-shadow: 0 0 8px #FDB927;
+}
+
+/* Thunder 球员号码 */
+.card.thunder .player-number {
+    color: #FF6B35;
+    text-shadow: 0 0 8px #FF6B35;
+}
+
+/* Bulls 球员号码 */
+.card.bulls .player-number {
+    color: #FF3B30;
+    text-shadow: 0 0 8px #FF3B30;
+}
+
+/* Mavericks 球员号码 */
+.card.mavericks .player-number {
+    color: #41B6E6;
+    text-shadow: 0 0 8px #41B6E6;
+}
+
+.player-image {
+    width: 100%;
+    height: 160px;
+    margin: 0 auto 10px;
+    transform: translateZ(80px); /* 让球员图片更突出 */
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.4));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.player-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+}
+
+
+.player-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    color: white;
+}
+
+/* Warriors 球员名称 */
+.card.warriors .player-name {
+    text-shadow: 0 2px 4px rgba(253, 185, 39, 0.3);
+}
+
+/* Lakers 球员名称 */
+.card.lakers .player-name {
+    text-shadow: 0 2px 4px rgba(253, 185, 39, 0.3);
+}
+
+/* Thunder 球员名称 */
+.card.thunder .player-name {
+    text-shadow: 0 2px 4px rgba(255, 107, 53, 0.4);
+}
+
+/* Bulls 球员名称 */
+.card.bulls .player-name {
+    text-shadow: 0 2px 4px rgba(255, 59, 48, 0.4);
+}
+
+/* Mavericks 球员名称 */
+.card.mavericks .player-name {
+    text-shadow: 0 2px 4px rgba(65, 182, 230, 0.4);
+}
+
+.player-achievements {
+    font-size: 0.7rem;
+    color: #b0b0b0;
+    line-height: 1.3;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(232, 119, 34, 0.95);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .cards-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .card-container {
+        width: 100%;
+        max-width: 250px;
+        height: 300px;
+    }
+
+    body {
+        padding: 15px;
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .cards-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card-container {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+} 

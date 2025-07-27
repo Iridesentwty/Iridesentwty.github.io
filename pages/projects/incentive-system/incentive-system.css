@@ -1,0 +1,176 @@
+/* incentive-system.css */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.project-hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #465261 100%);
+    color: white;
+    padding: 100px 0 60px;
+    text-align: center;
+}
+
+.project-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.project-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.content-section {
+    background: white;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 15px;
+    font-weight: 600;
+}
+
+.section-subtitle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5%;
+    height: 90%;
+    width: 5px;
+    background: #3498db;
+    border-radius: 3px;
+}
+
+/* 激励规则 */
+.rules-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.rules-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.rules-list i {
+    font-size: 1.5rem;
+    color: #27ae60;
+    margin-top: 5px;
+}
+
+/* 数据看板 */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.kpi-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+}
+
+.kpi-card h4 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.kpi-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.kpi-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.kpi-label {
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.kpi-value {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.kpi-value.positive {
+    color: #27ae60;
+}
+
+.kpi-value.negative {
+    color: #e74c3c;
+}
+
+/* 结果分析 */
+.analysis-box {
+    text-align: center;
+    padding: 2.5rem;
+    border-radius: 12px;
+}
+
+.analysis-box.success {
+    background: #e8f5e9; /* Light green */
+    border: 2px solid #a5d6a7;
+}
+
+.analysis-box.failure {
+    background: #ffebee; /* Light red */
+    border: 2px solid #ef9a9a;
+}
+
+.analysis-box i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.analysis-box.success i {
+    color: #43a047;
+}
+
+.analysis-box.failure i {
+    color: #d32f2f;
+}
+
+.analysis-box h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.analysis-box p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.bonus-amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #43a047;
+} 

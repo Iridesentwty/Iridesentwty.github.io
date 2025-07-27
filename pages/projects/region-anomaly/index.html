@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地区异常识别系统 - 王天宇</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../../index.html">我的主页</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../../../index.html#home" class="nav-link">首页</a></li>
+                <li class="nav-item"><a href="../../../index.html#about" class="nav-link">关于我</a></li>
+                <li class="nav-item"><a href="../../../index.html#skills" class="nav-link">技能</a></li>
+                <li class="nav-item"><a href="../../../index.html#projects" class="nav-link">项目</a></li>
+                <li class="nav-item"><a href="../../../index.html#hobbies" class="nav-link">兴趣爱好</a></li>
+                <li class="nav-item"><a href="../../../index.html#contact" class="nav-link">联系我</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="about" style="margin-top:80px;">
+        <div class="container">
+            <h2 class="section-title">地区异常识别系统</h2>
+            <div class="carbon-content">
+                <div class="about-main">
+                    <div class="about-text">
+                        <h3>项目背景</h3>
+                        <p class="carbon-background">为保障物流网络的稳定运行，需要建立一套智能化的地区异常识别系统。通过监控关键运营指标，及时发现异常地区，为决策层提供预警信息，确保业务连续性和服务质量。</p>
+                        
+                        <h3>核心监控指标</h3>
+                        <ul>
+                            <li><strong>派件量</strong>：反映地区业务活跃度和市场需求变化的核心指标</li>
+                            <li><strong>柜机启用数量</strong>：新投放设备的启用情况，体现市场拓展效果</li>
+                            <li><strong>加副柜数量</strong>：现有设备的扩容情况，反映业务增长压力</li>
+                            <li><strong>柜机净增数量</strong>：设备投放与回收的净变化，衡量网络扩张速度</li>
+                        </ul>
+
+                        <h3>三种异常识别方法</h3>
+                        <div class="carbon-result">
+                            <div class="chart-container">
+                                <h4>方法一：极端异常识别</h4>
+                                <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">标准化后 Z-score < -2</p>
+                                <img src="https://quickchart.io/chart?c={type:'scatter',data:{datasets:[{label:'正常区间',data:[{x:1,y:1.2},{x:2,y:0.8},{x:3,y:-0.5},{x:4,y:1.5},{x:5,y:-1.2},{x:6,y:0.3},{x:7,y:-0.8},{x:8,y:1.8}],backgroundColor:'rgba(46,204,113,0.8)',borderColor:'rgba(46,204,113,1)',pointRadius:6},{label:'极端异常',data:[{x:9,y:-2.3},{x:10,y:-2.8},{x:11,y:-2.1}],backgroundColor:'rgba(231,76,60,0.8)',borderColor:'rgba(231,76,60,1)',pointRadius:8}]},options:{responsive:true,plugins:{title:{display:true,text:'极端异常识别示例'}},scales:{x:{title:{display:true,text:'地区编号'}},y:{title:{display:true,text:'标准化得分'},suggestedMin:-3,suggestedMax:2}}}}" alt="极端异常识别散点图" width="450" height="300">
+                            </div>
+                            
+                            <div class="chart-container">
+                                <h4>方法二：连续低迷识别</h4>
+                                <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">标准化后持续 < 0</p>
+                                <img src="https://quickchart.io/chart?c={type:'line',data:{labels:['1月','2月','3月','4月','5月','6月','7月','8月'],datasets:[{label:'地区A(正常)',data:[0.5,-0.2,0.8,1.1,-0.3,0.6,1.2,0.4],borderColor:'rgba(46,204,113,1)',backgroundColor:'rgba(46,204,113,0.1)',fill:false,tension:0.4},{label:'地区B(连续低迷)',data:[-0.8,-1.2,-0.5,-0.9,-1.1,-0.7,-1.3,-0.6],borderColor:'rgba(230,126,34,1)',backgroundColor:'rgba(230,126,34,0.1)',fill:false,tension:0.4}]},options:{responsive:true,plugins:{title:{display:true,text:'连续低迷趋势分析'}},scales:{y:{title:{display:true,text:'标准化得分'},suggestedMin:-2,suggestedMax:2}}}}" alt="连续低迷识别折线图" width="450" height="300">
+                            </div>
+                            
+                            <div class="chart-container">
+                                <h4>方法三：下降明显识别</h4>
+                                <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">从正值持续下降</p>
+                                <img src="https://quickchart.io/chart?c={type:'line',data:{labels:['1月','2月','3月','4月','5月','6月','7月','8月'],datasets:[{label:'地区C(稳定)',data:[1.2,1.1,1.3,0.9,1.0,1.4,1.2,1.1],borderColor:'rgba(46,204,113,1)',backgroundColor:'rgba(46,204,113,0.1)',fill:false,tension:0.4},{label:'地区D(明显下降)',data:[1.5,1.2,0.8,0.3,-0.2,-0.6,-1.1,-1.4],borderColor:'rgba(155,89,182,1)',backgroundColor:'rgba(155,89,182,0.1)',fill:false,tension:0.4}]},options:{responsive:true,plugins:{title:{display:true,text:'下降趋势异常识别'}},scales:{y:{title:{display:true,text:'标准化得分'},suggestedMin:-2,suggestedMax:2}}}}" alt="下降趋势识别折线图" width="450" height="300">
+                            </div>
+                            
+                            <div class="chart-container">
+                                <h4>异常地区分布热力图</h4>
+                                <img src="https://quickchart.io/chart?c={type:'doughnut',data:{labels:['正常地区','极端异常','连续低迷','下降明显'],datasets:[{data:[78,8,9,5],backgroundColor:['rgba(46,204,113,0.8)','rgba(231,76,60,0.8)','rgba(230,126,34,0.8)','rgba(155,89,182,0.8)'],borderColor:['rgba(46,204,113,1)','rgba(231,76,60,1)','rgba(230,126,34,1)','rgba(155,89,182,1)'],borderWidth:2}]},options:{responsive:true,plugins:{title:{display:true,text:'异常地区类型分布'},legend:{position:'bottom'}}}}" alt="异常类型分布饼图" width="450" height="300">
+                            </div>
+                        </div>
+                        
+                        <div class="carbon-analysis">
+                            <h3>系统特点与优势</h3>
+                            <div class="finding-cards">
+                                <div class="finding-card">
+                                    <div class="finding-icon">⚡</div>
+                                    <h4>实时监控</h4>
+                                    <p>基于实时数据流，7×24小时监控各地区关键指标变化，及时发现异常</p>
+                                </div>
+                                <div class="finding-card">
+                                    <div class="finding-icon">🎯</div>
+                                    <h4>多维度评估</h4>
+                                    <p>三种异常识别方法相互补充，覆盖不同类型的异常模式</p>
+                                </div>
+                                <div class="finding-card">
+                                    <div class="finding-icon">📊</div>
+                                    <h4>智能预警</h4>
+                                    <p>自动化异常评分和分级预警，提高响应效率和准确性</p>
+                                </div>
+                                <div class="finding-card">
+                                    <div class="finding-icon">🔄</div>
+                                    <h4>动态调整</h4>
+                                    <p>系统可根据历史数据和业务变化动态调整阈值和权重</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="data-sources">
+                            <h3>技术实现与数据来源</h3>
+                            <div class="method-section">
+                                <div class="data-source-item">
+                                    <h4>📊 数据来源</h4>
+                                    <ul>
+                                        <li>业务系统：实时派件量、柜机运营数据</li>
+                                        <li>设备管理系统：柜机启用、停用、维护记录</li>
+                                        <li>网络规划系统：设备投放和回收计划</li>
+                                        <li>历史数据库：用于建立基准线和趋势分析</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="data-source-item">
+                                    <h4>🔬 核心算法</h4>
+                                    <div class="formula-box">
+                                        <p><strong>标准化处理：</strong></p>
+                                        <code>Z-score = (X - μ) / σ</code>
+                                        <p><strong>异常评分：</strong></p>
+                                        <code>Score = w₁×极端异常 + w₂×连续低迷 + w₃×下降明显</code>
+                                    </div>
+                                </div>
+                                
+                                <div class="data-source-item">
+                                    <h4>🛠️ 技术栈</h4>
+                                    <ul>
+                                        <li>Python + Pandas：数据处理和异常检测算法</li>
+                                        <li>NumPy + SciPy：统计分析和数值计算</li>
+                                        <li>Matplotlib + Plotly：数据可视化和报表生成</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:40px;">
+                <a href="../../../index.html#projects" class="btn btn-primary">返回主页</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 王天宇. 保留所有权利.</p>
+        </div>
+    </footer>
+</body>
+</html> 

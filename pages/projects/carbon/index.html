@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作经历 - 王天宇</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../../index.html">我的主页</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../../../index.html#home" class="nav-link">首页</a></li>
+                <li class="nav-item"><a href="../../../index.html#about" class="nav-link">关于我</a></li>
+                <li class="nav-item"><a href="../../../index.html#skills" class="nav-link">技能</a></li>
+                <li class="nav-item"><a href="../../../index.html#projects" class="nav-link">项目</a></li>
+                <li class="nav-item"><a href="../../../index.html#hobbies" class="nav-link">兴趣爱好</a></li>
+                <li class="nav-item"><a href="../../../index.html#contact" class="nav-link">联系我</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="about" style="margin-top:80px;">
+        <div class="container">
+            <h2 class="section-title">中国物流行业碳排放测算</h2>
+            <div class="carbon-content">
+                <div class="about-main">
+                    <div class="about-text">
+                        <h3>项目背景</h3>
+                        <p class="carbon-background">为响应国家碳中和战略，需要对中国物流行业碳排放进行测算并分析影响因素。本文将视角聚焦在城市群上，探究不同城市群的物流行业碳排放差异。</p>
+                        <h3>工作内容</h3>
+                        <ul>
+                            <li><strong>数据收集与处理</strong>：收集2010-2021年中国31个省份物流行业相关数据，包括货运量、运输结构、能源消费等</li>
+                            <li><strong>碳排放测算</strong>：基于IPCC碳排放计算指南，建立物流行业碳排放测算模型，计算各省份、各运输方式碳排放量</li>
+                            <li><strong>技术工具</strong>：应用<strong>Python</strong>、<strong>Pandas</strong>、<strong>NumPy</strong>进行数据清洗和处理，<strong>Matplotlib</strong>、<strong>Seaborn</strong>进行可视化</li>
+                            <li><strong>因素分解分析</strong>：运用<strong>LMDI模型</strong>进行碳排放驱动因素分解，识别经济规模、运输结构、技术进步等因素的贡献度</li>
+                            <li><strong>空间分析</strong>：采用ArcGIS进行地理空间分析，研究不同城市群物流碳排放的空间分布特征</li>
+                            <li><strong>政策建议</strong>：基于分析结果，提出针对性的物流业低碳发展政策建议</li>
+                        </ul>
+                        <h3>项目相关结果展示</h3>
+                        <div class="carbon-result">
+                          <!-- 2021年主要省份物流业碳排放量 -->
+                          <div class="chart-container">
+                            <h4>2021年主要省份物流业碳排放量 (万吨CO₂)</h4>
+                            <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['广东','江苏','山东','浙江','河南','四川','湖北','福建','安徽','湖南'],datasets:[{label:'碳排放量(万吨)',data:[2856,2341,2187,1876,1654,1432,1287,1156,1089,987],backgroundColor:'rgba(52,152,219,0.8)',borderColor:'rgba(52,152,219,1)',borderWidth:2}]},options:{responsive:true,plugins:{title:{display:true,text:'2021年主要省份物流业碳排放量'}},scales:{y:{beginAtZero:true,title:{display:true,text:'碳排放量(万吨CO₂)'}}}}}" alt="省份碳排放量柱状图" width="450" height="320">
+                          </div>
+                          
+                          <!-- 2010-2021年全国物流业碳排放趋势 -->
+                          <div class="chart-container">
+                            <h4>2010-2021年全国物流业碳排放趋势</h4>
+                            <img src="https://quickchart.io/chart?c={type:'line',data:{labels:['2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021'],datasets:[{label:'碳排放量(万吨)',data:[8245,8967,9456,9821,10234,10567,10789,11023,11456,11789,10987,11234],borderColor:'rgba(231,76,60,1)',backgroundColor:'rgba(231,76,60,0.1)',fill:true,tension:0.4}]},options:{responsive:true,plugins:{title:{display:true,text:'全国物流业碳排放年度变化趋势'}},scales:{y:{beginAtZero:true,title:{display:true,text:'碳排放量(万吨CO₂)'}}}}}" alt="碳排放趋势折线图" width="450" height="320">
+                          </div>
+                          
+                          <!-- 不同运输方式碳排放对比 -->
+                          <div class="chart-container">
+                            <h4>不同运输方式碳排放占比 (2021年)</h4>
+                            <div class="pie-chart-custom">
+                              <div class="pie-data">
+                                <div class="pie-item" style="--percentage: 68.5; --color: #3498db;">
+                                  <span class="pie-label">公路运输</span>
+                                  <span class="pie-value">68.5%</span>
+                                </div>
+                                <div class="pie-item" style="--percentage: 18.2; --color: #e74c3c;">
+                                  <span class="pie-label">铁路运输</span>
+                                  <span class="pie-value">18.2%</span>
+                                </div>
+                                <div class="pie-item" style="--percentage: 8.7; --color: #2ecc71;">
+                                  <span class="pie-label">水路运输</span>
+                                  <span class="pie-value">8.7%</span>
+                                </div>
+                                <div class="pie-item" style="--percentage: 3.8; --color: #f39c12;">
+                                  <span class="pie-label">航空运输</span>
+                                  <span class="pie-value">3.8%</span>
+                                </div>
+                              </div>
+                              <div class="pie-visual">
+                                <div class="pie-circle"></div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <!-- 城市群物流业碳排放强度对比 -->
+                          <div class="chart-container">
+                            <h4>主要城市群物流业碳排放强度对比</h4>
+                            <img src="https://quickchart.io/chart?c={type:'scatter',data:{datasets:[{label:'碳排放强度(吨CO₂/万元)',data:[{x:1,y:2.3},{x:2,y:1.8},{x:3,y:2.1},{x:4,y:1.9},{x:5,y:2.5},{x:6,y:2.2}],backgroundColor:'rgba(243,156,18,0.8)',borderColor:'rgba(243,156,18,1)',pointRadius:8}]},options:{responsive:true,plugins:{title:{display:true,text:'城市群碳排放强度散点分析'}},scales:{x:{title:{display:true,text:'城市群(1:京津冀 2:长三角 3:珠三角 4:成渝 5:长江中游 6:中原)'}},y:{title:{display:true,text:'碳排放强度(吨CO₂/万元)'}}}}}" alt="城市群碳排放散点图" width="450" height="320">
+                          </div>
+                        </div>
+                        
+                        <div class="carbon-analysis">
+                          <h3>主要发现与结论</h3>
+                          <div class="finding-cards">
+                            <div class="finding-card">
+                              <div class="finding-icon">📊</div>
+                              <h4>区域差异显著</h4>
+                              <p>东部发达省份如广东、江苏物流业碳排放量较高，主要由于经济发达、物流需求大</p>
+                            </div>
+                            <div class="finding-card">
+                              <div class="finding-icon">📈</div>
+                              <h4>总体呈上升趋势</h4>
+                              <p>2010-2019年碳排放持续增长，2020年受疫情影响略有下降，2021年有所回升</p>
+                            </div>
+                            <div class="finding-card">
+                              <div class="finding-icon">🚛</div>
+                              <h4>公路运输占主导</h4>
+                              <p>公路运输碳排放占比达68.5%，是减排的重点领域</p>
+                            </div>
+                            <div class="finding-card">
+                              <div class="finding-icon">🏙️</div>
+                              <h4>城市群效应明显</h4>
+                              <p>长三角、珠三角等发达城市群碳排放强度相对较低，规模效应显著</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="data-sources">
+                          <h3>数据来源与研究方法</h3>
+                          <div class="method-section">
+                            <div class="data-source-item">
+                              <h4>📊 主要数据来源</h4>
+                              <ul>
+                                <li>国家统计局：各省份货运量、GDP等经济数据</li>
+                                <li>交通运输部：交通运输行业统计公报</li>
+                                <li>中国能源统计年鉴：各类运输工具能源消费数据</li>
+                                <li>IPCC排放因子数据库：碳排放系数</li>
+                              </ul>
+                            </div>
+                            
+                            <div class="data-source-item">
+                              <h4>🔬 核心计算公式</h4>
+                              <div class="formula-box">
+                                <p><strong>碳排放量计算：</strong></p>
+                                <code>CO₂ = ∑(活动数据ᵢ × 排放因子ᵢ × 44/12)</code>
+                                <p><strong>LMDI分解模型：</strong></p>
+                                <code>ΔC = ΔC_act + ΔC_str + ΔC_int</code>
+                              </div>
+                            </div>
+                            
+                            <div class="data-source-item">
+                              <h4>🎯 研究创新点</h4>
+                              <ul>
+                                <li>首次构建省级物流业碳排放数据库(2010-2021)</li>
+                                <li>建立多层次LMDI分解框架</li>
+                                <li>结合地理空间分析揭示城市群差异</li>
+                                <li>提出基于碳中和目标的减排路径</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:40px;">
+                <a href="../../../index.html#about" class="btn btn-primary">返回主页</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 王天宇. 保留所有权利.</p>
+        </div>
+    </footer>
+</body>
+</html> 

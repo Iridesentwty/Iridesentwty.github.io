@@ -1,0 +1,447 @@
+<!-- 强制刷新部署的触发器 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 - 王天宇</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">我的主页</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">关于我</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">技能</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">项目</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#hobbies" class="nav-link">兴趣爱好</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">联系我</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页部分 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">你好，我是 <span class="highlight">王天宇</span></h1>
+                <p class="hero-subtitle">数据科学爱好者 | 前端开发者</p>
+                <p class="hero-description">
+                    热爱技术，专注于数据分析，喜欢探索新事物，追求代码的优雅与效率。
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">查看我的项目</a>
+                    <a href="pages/about/experience.html" class="btn btn-secondary">了解我的经历</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <a href="assets/documents/南京审计大学-工商管理-王天宇.pdf"><img src="assets/images/王天宇.jpg" alt="用户头像" class="avatar-image"></a>
+                    </div>
+                    <div class="profile-info">
+                        <h3>王天宇</h3>
+                        <p>数据科学爱好者</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- 关于我部分 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content">
+                <div class="about-main">
+                    <div class="about-text">
+                        <h3>教育背景</h3>
+                        <div class="education-item">
+                            <h4>南京审计大学(2021.9-2024.6)</h4>
+                            <h4>工商管理</h4>
+                            <h4>管理学硕士</h4>
+                        </div>
+                        <p>
+                            • GPA：3.2/4 <br>
+                            • 获奖情况：南京审计大学学业奖学金二等奖*2，南京审计大学学业奖学金三等奖 <br>
+                            • 主修课程：高等运筹学、公司战略、物流与供应链管理等 <br>
+                        </p>
+                        <div class="education-item">
+                            <h4>南京审计大学(2016.9-2020.6)</h4>
+                            <h4>物流管理</h4>
+                            <h4>管理学学士</h4>
+                        </div>
+                        <p>
+                            • GPA：3.0/4 <br>
+                            • 获奖情况：百蝶智慧供应链设计大赛全国特等奖 <br>
+                            • 主修课程：物流系统规划、供应链管理、运筹学、统计学、系统动力学、r语言、python数据分析 <br>
+                        </p>
+                        <h3 class="about-text-title">工作理念</h3>
+                        <p>
+                            我相信技术可以改变世界，通过数据驱动的方法解决实际问题。
+                            我追求代码的简洁性和可维护性，注重用户体验和业务价值。
+                        </p>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <a href="pages/about/experience.html" class="stat-item">
+                        <div class="stat-number">1+</div>
+                        <div class="stat-label">年工作经验</div>
+                    </a>
+                    <a href="#projects" class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">完成项目</div>
+                    </a>
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">掌握技术</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 核心能力网格 -->
+            <div class="competencies-wrapper">
+                <h3 class="section-subtitle">核心能力</h3>
+                <div class="competency-grid">
+                    <div class="competency-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>数据驱动决策</h4>
+                        <p>从复杂数据中提取价值，为业务决策提供有力支持。</p>
+                    </div>
+                    <div class="competency-item">
+                        <i class="fas fa-robot"></i>
+                        <h4>机器学习应用</h4>
+                        <p>构建和优化预测模型，解决实际的商业问题。</p>
+                    </div>
+                    <div class="competency-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>商业洞察力</h4>
+                        <p>深刻理解业务逻辑，将技术与商业目标相结合。</p>
+                    </div>
+                    <div class="competency-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <h4>数据可视化</h4>
+                        <p>擅长使用工具将数据转化为直观、有吸引力的图表。</p>
+                    </div>
+                    <div class="competency-item">
+                        <i class="fas fa-tasks"></i>
+                        <h4>项目管理</h4>
+                        <p>具备项目规划、执行和交付能力，确保目标达成。</p>
+                    </div>
+                    <div class="competency-item">
+                        <i class="fas fa-comments"></i>
+                        <h4>高效沟通</h4>
+                        <p>能够与不同背景的团队成员协作，清晰传达技术方案。</p>
+                    </div>
+                    <div class="competency-item">
+                        <i class="fas fa-brain"></i>
+                        <h4>逻辑思考能力</h4>
+                        <p>具备严密的逻辑思维和批判性思考能力，善于分析复杂问题并提出解决方案。</p>
+                    </div>
+                    <div class="competency-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>持续学习能力</h4>
+                        <p>保持对新技术的敏感度，快速学习并适应不断变化的技术环境。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能部分 -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">技能专长</h2>
+            <button id="testSkills" style="display: none; margin: 0 auto 2rem; padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">测试技能条动画</button>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> 编程语言</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 30%" data-width="30%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 30%" data-width="30%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">R</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%" data-width="70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> 数据科学</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">机器学习</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">深度学习</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 10%" data-width="10%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">数据分析</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%" data-width="92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">数据可视化</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> 工具框架</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">PyTorch</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 12%" data-width="12%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Pandas</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Matplotlib</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Numpy</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%" data-width="70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示部分 -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">项目展示</h2>
+            <div class="projects-grid">
+                <!-- 项目1 -->
+                <a href="pages/projects/carbon/index.html" class="project-card">
+                    <div class="project-image"><i class="fas fa-leaf"></i></div>
+                    <div class="project-content">
+                        <h3>中国物流行业碳排放测算</h3>
+                        <p>基于城市数据的碳排放影响因素分析，使用回归模型和可视化技术展示结果。</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">数据分析</span>
+                            <span class="tag">可视化</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- 项目2 -->
+                <a href="pages/projects/region-anomaly/index.html" class="project-card">
+                    <div class="project-image"><i class="fas fa-search-location"></i></div>
+                    <div class="project-content">
+                        <h3>地区异常识别系统</h3>
+                        <p>基于派件量、柜机启用等核心指标的地区异常识别系统，采用三种评分方式识别异常地区。</p>
+                        <div class="project-tags">
+                            <span class="tag">异常检测</span>
+                            <span class="tag">数据分析</span>
+                            <span class="tag">监控系统</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 项目3 -->
+                <a href="pages/projects/incentive-system/index.html" class="project-card">
+                    <div class="project-image"><i class="fas fa-trophy"></i></div>
+                    <div class="project-content">
+                        <h3>超额激励系统</h3>
+                        <p>当派件量和派件收入均超越季度超额目标时，系统将自动计算并分配激励。此设计确保激励发放基于整个季度的卓越表现，而非短期波动。</p>
+                        <div class="project-tags">
+                            <span class="tag">激励系统</span>
+                            <span class="tag">绩效管理</span>
+                            <span class="tag">数据分析</span>
+                        </div>
+                    </div>
+                </a>
+
+                 <!-- 项目4 -->
+                 <a href="pages/projects/basketball-card/basketball-card.html" class="project-card">
+                    <div class="project-image"><i class="fas fa-basketball-ball"></i></div>
+                    <div class="project-content">
+                        <h3>3D篮球巨星卡片</h3>
+                        <p>一个具有3D悬浮和全息光泽效果的交互式篮球卡片。</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS 3D</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 兴趣爱好部分 -->
+    <section id="hobbies" class="hobbies">
+        <div class="container">
+            <h2 class="section-title">兴趣爱好</h2>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>电影</h3>
+                    <p>喜欢看电影，享受在电影中的情感体验。</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>音乐</h3>
+                    <p>热爱各种类型的音乐，从古典到现代流行都有涉猎。</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-basketball-ball"></i>
+                    </div>
+                    <h3>篮球</h3>
+                    <p>喜欢打篮球，享受在球场上的挥洒汗水。</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>游戏</h3>
+                    <p>偶尔玩一些策略类游戏，放松心情。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我部分 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>联系方式</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>1458132729@qq.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+86 18652002093</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>中国，南京</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>发送消息</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="您的邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="主题" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="您的消息" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">发送消息</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 王天宇. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        // 简单的悬浮提示JS
+        const githubLink = document.querySelector('.social-link[href*="github"]');
+        const tooltip = document.querySelector('.github-tooltip');
+        if (githubLink && tooltip) {
+            githubLink.parentElement.onmouseenter = () => {
+                tooltip.style.visibility = 'visible';
+                tooltip.style.opacity = '1';
+            };
+            githubLink.parentElement.onmouseleave = () => {
+                tooltip.style.visibility = 'hidden';
+                tooltip.style.opacity = '0';
+            };
+        }
+    </script>
+</body>
+</html> 
